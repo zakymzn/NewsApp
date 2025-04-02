@@ -52,15 +52,9 @@ class NewsFragment : Fragment() {
                                 context,
                                 "Terjadi kesalahan" + result.error,
                                 Toast.LENGTH_SHORT
-                            )
+                            ).show()
                         }
                     }
-                }
-
-                binding?.rvNews?.apply {
-                    layoutManager = LinearLayoutManager(context)
-                    setHasFixedSize(true)
-                    adapter = newsAdapter
                 }
             }
         }
